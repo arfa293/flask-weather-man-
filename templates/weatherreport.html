@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+</head>
+<body>
+
+    <h1>Weather Report</h1>
+
+    <!-- Year Input Form -->
+    <form action="/report" method="GET">
+        <label for="year">Enter Year:</label>
+        <input type="text" id="year" name="year" required>
+        <button type="submit">Get Report</button>
+    </form>
+
+    <hr>
+
+    <!-- Display Yearly Report -->
+    {% if yearly_report %}
+        <h2>Yearly Report</h2>
+        <pre>{{ yearly_report }}</pre>
+    {% endif %}
+
+    <!-- Display Monthly Report -->
+    {% if monthly_report %}
+        <h2>Monthly Report</h2>
+        <pre>{{ monthly_report }}</pre>
+    {% endif %}
+
+    <br>
+    <a href="/">Go Back</a>
+
+</body>
+</html>
