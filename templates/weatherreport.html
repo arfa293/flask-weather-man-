@@ -30,6 +30,15 @@
         <pre>{{ monthly_report }}</pre>
     {% endif %}
 
+    <!-- Display Yearly Summary (Highest/Lowest Temp & Humidity) -->
+    {% if yearly_summary %}
+        <hr>
+        <h2>Yearly Weather Summary for {{ year }}</h2>
+        <p><strong>Highest Temperature:</strong> {{ yearly_summary.highest_temp }}°C on {{ yearly_summary.highest_temp_date }}</p>
+        <p><strong>Lowest Temperature:</strong> {{ yearly_summary.lowest_temp }}°C on {{ yearly_summary.lowest_temp_date }}</p>
+        <p><strong>Most Humid Day:</strong> {{ yearly_summary.most_humid }}% on {{ yearly_summary.most_humid_date }}</p>
+    {% endif %}
+
     <br>
     <a href="/">Go Back</a>
 
